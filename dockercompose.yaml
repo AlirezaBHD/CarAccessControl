@@ -1,0 +1,49 @@
+services:
+  api:
+    container_name: car_api
+    build:
+      context: ./api
+      dockerfile: src/CarAccessControl.API/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__Default: Host=db;Port=5432;Database=car_access_control;Username=postgres;Password=12345
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - car_net
+
+  web:
+    container_name: car_web
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+      args:
+        VITE_BASE_URL: "http://api:8080"
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    networks:
+      - car_net
+
+  db:
+    image: postgres:18
+    container_name: car_db
+    environment:
+      POSTGRES_DB: car_access_control
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - car_net
+
+networks:
+  car_net:
+
+volumes:
+  pgdata:
