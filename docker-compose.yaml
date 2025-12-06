@@ -5,6 +5,7 @@ services:
       context: ./api
       dockerfile: src/CarAccessControl.API/Dockerfile
     environment:
+      FrontEnd__url: http://localhost
       ASPNETCORE_ENVIRONMENT: Production
       ConnectionStrings__Default: Host=db;Port=5432;Database=car_access_control;Username=postgres;Password=12345
     ports:
@@ -20,7 +21,7 @@ services:
       context: ./web
       dockerfile: Dockerfile
       args:
-        VITE_BASE_URL: "http://api:8080"
+        VITE_BASE_URL: "http://localhost:8080"
     ports:
       - "80:80"
     depends_on:
