@@ -8,10 +8,12 @@ services:
       FrontEnd__url: http://localhost
       ASPNETCORE_ENVIRONMENT: Production
       ConnectionStrings__Default: Host=db;Port=5432;Database=car_access_control;Username=postgres;Password=12345
+      ModelUrl: "http://localhost:8000"
     ports:
       - "8080:8080"
     depends_on:
       - db
+      - ai_model
     networks:
       - car_net
 
@@ -40,6 +42,14 @@ services:
       - pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    networks:
+      - car_net
+
+  ai_model:
+    image: plate-recognition:0.0.1-warp-product
+    container_name: car_ai_model
+    ports:
+      - "8000:8000"
     networks:
       - car_net
 
