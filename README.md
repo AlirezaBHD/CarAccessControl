@@ -54,18 +54,48 @@ This project is designed as a decoupled system where the backend handles logic a
 
 ---
 
-## 🔄 How It Works (The Flow)
+## 🔄 How It Works
 
 1.  **Capture:** The IP Camera captures an image of the vehicle at the gate.
 2.  **Process:** The backend receives the image and processes it via **OpenCvSharp4**.
 3.  **Recognition:** The image is sent to the **AI Model** service.
 4.  **Result:** The AI returns the recognized license plate text.
 5.  **Real-time Alert:** The result (Plate Number + Access Status + Photo) is pushed instantly to the Frontend via **SignalR**.
-docker-compose up --build
+
+---
+
+### 🐳 Installation & Setup
+
+Since the AI Model relies on a private Docker image, follow these steps to get started:
+
+### 1. Prerequisites
+Ensure you have **Docker** and **Docker Compose** installed on your machine.
+
+### 2. Load AI Model Image
+The AI model image is not hosted on public registries due to its size.
+1.  Download the image file (`plate-recognition.tar`) from **[LINK]**.
+2.  Place the file in the root directory (or a specific folder like `./docker-images`).
+3.  Run the following command to load the image into Docker:
+
+```bash
+# Example if the file is in 'docker-images' folder
+
+docker load -i docker-images/plate-recognition.tar
 ```
+
+### 3. Run the System
+
+Once the image is loaded, start the application stack:
+
+```bash
+docker-compose up -d
+```
+
+After the containers are up and running, you can access the services at:
+http://localhost:80
 
 ---
 
 ## 📄 License  
 
-Distributed under the MIT License. See LICENSE for more information.
+Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
