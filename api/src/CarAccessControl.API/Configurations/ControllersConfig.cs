@@ -18,7 +18,7 @@ public static class ControllersConfig
         });
 
         services.AddFluentValidationAutoValidation();
-        services.AddValidatorsFromAssemblyContaining<UpsertVehicleOwnerValidation>();
+        services.AddValidatorsFromAssemblyContaining<VehicleOwnerUpsertValidator>();
         services.AddFluentValidationRulesToSwagger();
 
         return services;
