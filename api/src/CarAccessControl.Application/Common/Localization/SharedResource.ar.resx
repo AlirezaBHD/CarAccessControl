@@ -30,4 +30,49 @@
     <data name="Validation_Numeric" xml:space="preserve">
         <value>يجب أن يحتوي “{PropertyName}” على أرقام فقط.</value>
     </data>
+    <data name="Property_CameraId" xml:space="preserve">
+        <value>معرف الكاميرا</value>
+    </data>
+    <data name="Property_VehicleName" xml:space="preserve">
+        <value>اسم المركبة</value>
+    </data>
+    <data name="Property_OwnerId" xml:space="preserve">
+        <value>معرف المالك</value>
+    </data>
+    <data name="Property_IsActive" xml:space="preserve">
+        <value>حالة النشاط</value>
+    </data>
+    <data name="Property_GateName" xml:space="preserve">
+        <value>اسم البوابة</value>
+    </data>
+    <data name="Property_PlateNumber" xml:space="preserve">
+        <value>رقم اللوحة</value>
+    </data>
+    <data name="Property_FrameInterval" xml:space="preserve">
+        <value>الفاصل الزمني للإطارات</value>
+    </data>
+    <data name="Property_Url" xml:space="preserve">
+        <value>رابط البث</value>
+    </data>
+    <data name="Property_Ip" xml:space="preserve">
+        <value>عنوان IP</value>
+    </data>
+    <data name="Property_Location" xml:space="preserve">
+        <value>الموقع</value>
+    </data>
+    <data name="Validation_GreaterThan" xml:space="preserve">
+        <value>يجب أن يكون “{PropertyName}” أكبر من {ComparisonValue}.</value>
+    </data>
+    <data name="Validation_PlateInvalid" xml:space="preserve">
+        <value>تنسيق رقم اللوحة غير صالح.</value>
+    </data>
+    <data name="Validation_UrlInvalid" xml:space="preserve">
+        <value>تنسيق الرابط غير صالح.</value>
+    </data>
+    <data name="Validation_IpInvalid" xml:space="preserve">
+        <value>تنسيق عنوان IP غير صالح.</value>
+    </data>
+    <data name="Validation_MaxLength" xml:space="preserve">
+        <value>يجب ألا يتجاوز “{PropertyName}” {MaxLength} حرفاً.</value>
+    </data>
 </root>

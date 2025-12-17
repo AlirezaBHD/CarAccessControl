@@ -30,4 +30,49 @@
     <data name="Validation_Numeric" xml:space="preserve">
         <value>“{PropertyName}” must contain only numbers.</value>
     </data>
+    <data name="Validation_IpInvalid" xml:space="preserve">
+        <value>Invalid IP address format.</value>
+    </data>
+    <data name="Validation_UrlInvalid" xml:space="preserve">
+        <value>Invalid URL format.</value>
+    </data>
+    <data name="Validation_PlateInvalid" xml:space="preserve">
+        <value>Invalid license plate format.</value>
+    </data>
+    <data name="Validation_GreaterThan" xml:space="preserve">
+        <value>“{PropertyName}” must be greater than {ComparisonValue}.</value>
+    </data>
+    <data name="Property_Location" xml:space="preserve">
+        <value>Location</value>
+    </data>
+    <data name="Property_Ip" xml:space="preserve">
+        <value>IP Address</value>
+    </data>
+    <data name="Property_Url" xml:space="preserve">
+        <value>RTSP/Stream URL</value>
+    </data>
+    <data name="Property_FrameInterval" xml:space="preserve">
+        <value>Frame Interval</value>
+    </data>
+    <data name="Property_PlateNumber" xml:space="preserve">
+        <value>License Plate</value>
+    </data>
+    <data name="Property_GateName" xml:space="preserve">
+        <value>Gate Name</value>
+    </data>
+    <data name="Property_IsActive" xml:space="preserve">
+        <value>Active Status</value>
+    </data>
+    <data name="Property_OwnerId" xml:space="preserve">
+        <value>Owner ID</value>
+    </data>
+    <data name="Property_CameraId" xml:space="preserve">
+        <value>Camera ID</value>
+    </data>
+    <data name="Property_VehicleName" xml:space="preserve">
+        <value>Vehicle Name</value>
+    </data>
+    <data name="Validation_MaxLength" xml:space="preserve">
+        <value>“{PropertyName}” must not exceed {MaxLength} characters.</value>
+    </data>
 </root>
