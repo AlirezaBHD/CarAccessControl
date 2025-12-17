@@ -4,7 +4,7 @@ namespace CarAccessControl.Domain.Entities;
 
 public class Camera: BaseEntity
 {
-    [Length(15,15)]
+    [Length(7, 15)]
     [StringLength(15)]
     public required string Ip { get; set; }
     
