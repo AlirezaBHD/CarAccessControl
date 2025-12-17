@@ -9,6 +9,7 @@ var services = builder.Services;
 var configuration = builder.Configuration;
 
 builder.Services.AddControllers();
+services.AddAppLocalization();
 services.AddSwaggerDocumentation(configuration);
 services.AddAppControllers();
 services.AddAppCors(configuration);
@@ -30,6 +31,8 @@ if (app.Environment.IsDevelopment())
 }
 
 Console.Write("started");
+app.UseAppLocalization();
+
 
 app.UseHttpsRedirection();
 

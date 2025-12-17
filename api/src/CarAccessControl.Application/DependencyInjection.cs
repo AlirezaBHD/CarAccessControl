@@ -29,7 +29,7 @@ public static class DependencyInjection
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
         services.AddSignalR();
-
+        
         return services;
     }
 }
