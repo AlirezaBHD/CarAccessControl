@@ -60,11 +60,119 @@ namespace CarAccessControl.Application.Common.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Camera ID.
+        /// </summary>
+        internal static string Property_CameraId {
+            get {
+                return ResourceManager.GetString("Property_CameraId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frame Interval.
+        /// </summary>
+        internal static string Property_FrameInterval {
+            get {
+                return ResourceManager.GetString("Property_FrameInterval", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gate Name.
+        /// </summary>
+        internal static string Property_GateName {
+            get {
+                return ResourceManager.GetString("Property_GateName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IP Address.
+        /// </summary>
+        internal static string Property_Ip {
+            get {
+                return ResourceManager.GetString("Property_Ip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Active Status.
+        /// </summary>
+        internal static string Property_IsActive {
+            get {
+                return ResourceManager.GetString("Property_IsActive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Location.
+        /// </summary>
+        internal static string Property_Location {
+            get {
+                return ResourceManager.GetString("Property_Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owner ID.
+        /// </summary>
+        internal static string Property_OwnerId {
+            get {
+                return ResourceManager.GetString("Property_OwnerId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to License Plate.
+        /// </summary>
+        internal static string Property_PlateNumber {
+            get {
+                return ResourceManager.GetString("Property_PlateNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RTSP/Stream URL.
+        /// </summary>
+        internal static string Property_Url {
+            get {
+                return ResourceManager.GetString("Property_Url", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vehicle Name.
+        /// </summary>
+        internal static string Property_VehicleName {
+            get {
+                return ResourceManager.GetString("Property_VehicleName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to “{PropertyName}” must be exactly {MaxLength} characters..
         /// </summary>
         internal static string Validation_ExactLength {
             get {
                 return ResourceManager.GetString("Validation_ExactLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to “{PropertyName}” must be greater than {ComparisonValue}..
+        /// </summary>
+        internal static string Validation_GreaterThan {
+            get {
+                return ResourceManager.GetString("Validation_GreaterThan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid IP address format..
+        /// </summary>
+        internal static string Validation_IpInvalid {
+            get {
+                return ResourceManager.GetString("Validation_IpInvalid", resourceCulture);
             }
         }
         
@@ -78,6 +186,15 @@ namespace CarAccessControl.Application.Common.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to “{PropertyName}” must not exceed {MaxLength} characters..
+        /// </summary>
+        internal static string Validation_MaxLength {
+            get {
+                return ResourceManager.GetString("Validation_MaxLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to “{PropertyName}” must contain only numbers..
         /// </summary>
         internal static string Validation_Numeric {
@@ -87,11 +204,29 @@ namespace CarAccessControl.Application.Common.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid license plate format..
+        /// </summary>
+        internal static string Validation_PlateInvalid {
+            get {
+                return ResourceManager.GetString("Validation_PlateInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to “{PropertyName}” is required..
         /// </summary>
         internal static string Validation_Required {
             get {
                 return ResourceManager.GetString("Validation_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid URL format..
+        /// </summary>
+        internal static string Validation_UrlInvalid {
+            get {
+                return ResourceManager.GetString("Validation_UrlInvalid", resourceCulture);
             }
         }
     }
