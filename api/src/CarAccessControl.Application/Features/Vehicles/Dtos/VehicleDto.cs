@@ -4,8 +4,8 @@ namespace CarAccessControl.Application.Features.Vehicles.Dtos;
 
 public class VehicleDto : IdentifierDto
 {
-    public string Name { get; set; }
+    public required string Name { get; set; }
     public int OwnerId { get; set; }
-    public string OwnerFirstName { get; set; }
-    public string OwnerSureName { get; set; }
+    public required string OwnerFirstName { get; set; }
+    public required string OwnerSureName { get; set; }
 }
