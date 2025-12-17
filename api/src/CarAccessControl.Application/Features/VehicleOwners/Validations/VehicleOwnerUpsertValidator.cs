@@ -4,9 +4,9 @@ using FluentValidation;
 
 namespace CarAccessControl.Application.Features.VehicleOwners.Validations;
 
-public class UpsertVehicleOwnerValidation : AbstractValidator<VehicleOwnerUpsertDto>
+public class VehicleOwnerUpsertValidator : AbstractValidator<VehicleOwnerUpsertDto>
 {
-    public UpsertVehicleOwnerValidation()
+    public VehicleOwnerUpsertValidator()
     {
         RuleFor(x => x.FirstName)
             .NotEmpty().WithMessage(SharedResource.Validation_Required)
