@@ -9,7 +9,7 @@ public class Gate : BaseEntity
     public required string Name { get; set; }
     
     [Length(2,200)]
-    [StringLength(20)]
+    [StringLength(200)]
     public required string Location { get; set; }
     
     public bool IsActive { get; set; }
