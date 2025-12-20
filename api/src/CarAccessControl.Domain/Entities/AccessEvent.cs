@@ -18,7 +18,7 @@ public class AccessEvent : BaseEntity
     public string? OwnerFirstName { get; init; }
     
     [StringLength(50)]
-    public string? OwnerSureName { get; init; }
+    public string? OwnerSurname { get; init; }
     public int? OwnerId { get; init; }
     
     [StringLength(200)]

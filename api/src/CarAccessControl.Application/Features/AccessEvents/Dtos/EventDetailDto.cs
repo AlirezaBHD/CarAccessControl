@@ -13,7 +13,7 @@ public class EventDetailDto
     
     public string? OwnerFirstName { get; init; }
     
-    public required string OwnerSureName { get; init; }
+    public required string OwnerSurname { get; init; }
     public required int OwnerId { get; init; }
     
     public required string GateName { get; init; }

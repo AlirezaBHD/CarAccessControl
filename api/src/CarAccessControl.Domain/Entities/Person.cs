@@ -10,7 +10,7 @@ public class Person : BaseEntity
     
     [Length(2,50)]
     [StringLength(50)]
-    public required string SureName { get; set; }
+    public required string Surname { get; set; }
     
     [Length(10,10)]
     [StringLength(10)]

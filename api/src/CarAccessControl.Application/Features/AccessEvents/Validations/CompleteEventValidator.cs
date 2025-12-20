@@ -16,8 +16,8 @@ public class CompleteEventValidator : AbstractValidator<CompleteEventDto>
             .Length(2, 50).WithMessage(SharedResource.Validation_Length)
             .When(x => !string.IsNullOrEmpty(x.OwnerFirstName));
 
-        RuleFor(x => x.OwnerSureName)
+        RuleFor(x => x.OwnerSurname)
             .Length(2, 50).WithMessage(SharedResource.Validation_Length)
-            .When(x => !string.IsNullOrEmpty(x.OwnerSureName));
+            .When(x => !string.IsNullOrEmpty(x.OwnerSurname));
     }
 }

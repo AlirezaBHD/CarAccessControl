@@ -14,6 +14,6 @@ public class VehicleProfile : Profile
         CreateMap<Vehicle, VehicleDto>();
 
         CreateMap<Vehicle, VehicleListDto>().ForMember(dest => dest.OwnerFullName, opt =>
-            opt.MapFrom(src => $"{src.Owner.FirstName} {src.Owner.SureName}"));
+            opt.MapFrom(src => $"{src.Owner.FirstName} {src.Owner.Surname}"));
     }
 }

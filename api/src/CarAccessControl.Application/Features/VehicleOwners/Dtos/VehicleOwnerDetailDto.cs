@@ -7,7 +7,7 @@ public class VehicleOwnerDetailDto : IdentifierDto
 {
     public required string FirstName { get; init; }
     
-    public required string SureName { get; init; }
+    public required string Surname { get; init; }
     
     public required string NationalCode { get; init; }
     

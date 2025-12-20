@@ -12,15 +12,13 @@ public class VehicleOwnerUpsertValidator : AbstractValidator<VehicleOwnerUpsertD
             .NotEmpty().WithMessage(SharedResource.Validation_Required)
             .Length(2, 50).WithMessage(SharedResource.Validation_Length); 
 
-        RuleFor(x => x.SureName)
+        RuleFor(x => x.Surname)
             .NotEmpty().WithMessage(SharedResource.Validation_Required)
             .Length(2, 50).WithMessage(SharedResource.Validation_Length);
 
         RuleFor(x => x.NationalCode)
             .NotEmpty().WithMessage(SharedResource.Validation_Required)
-            
             .Length(10).WithMessage(SharedResource.Validation_ExactLength)
-            
             .Matches("^[0-9]*$").WithMessage(SharedResource.Validation_Numeric);
     }
 }

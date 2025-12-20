@@ -16,7 +16,7 @@ public class RealTimeEventDto
     
     public string? OwnerFirstName { get; init; }
     
-    public string? OwnerSureName { get; init; }
+    public string? OwnerSurname { get; init; }
     
     public string? VehicleName { get; init; }
     

@@ -61,7 +61,7 @@ public class AccessEventService(
             GateId = gate.Id,
             OwnerId = vehicle?.OwnerId,
             OwnerFirstName = vehicle?.OwnerFirstName,
-            OwnerSureName = vehicle?.OwnerSureName,
+            OwnerSurname = vehicle?.OwnerSurname,
             VehicleId = vehicle?.Id,
             VehicleName = vehicle?.Name,
             PlateNumber = plate,

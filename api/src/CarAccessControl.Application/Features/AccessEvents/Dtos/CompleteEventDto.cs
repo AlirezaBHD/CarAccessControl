@@ -6,7 +6,7 @@ public class CompleteEventDto
     
     public string? OwnerFirstName { get; init; }
     
-    public string? OwnerSureName { get; init; }
+    public string? OwnerSurname { get; init; }
     
     public bool Enter { get; init; } = true;
 }

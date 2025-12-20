@@ -72,7 +72,7 @@ public class ExcelReportService : IExcelReportService
             
             worksheet.Cell(row, 4).Value = eventItem.VehicleName ?? "-";
             worksheet.Cell(row, 5).Value = eventItem.OwnerFirstName ?? "-";
-            worksheet.Cell(row, 6).Value = eventItem.OwnerSureName;
+            worksheet.Cell(row, 6).Value = eventItem.OwnerSurname;
             worksheet.Cell(row, 7).Value = eventItem.GateName;
             worksheet.Cell(row, 8).Value = eventItem.Enter ? "Entry" : "Exit";
             worksheet.Cell(row, 9).Value = eventItem.CreatedOn;
