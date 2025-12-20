@@ -8,7 +8,7 @@ const RealTimeAccessCard = ({ onAccessRecorded, currentEvents = [] }) => {
     const [formData, setFormData] = useState({
         plateNumber: '',
         firstName: '',
-        sureName: '',
+        surname: '',
         accessType: t('realtime.entry'),
         isImportant: false,
         notes: ''
@@ -46,7 +46,7 @@ const RealTimeAccessCard = ({ onAccessRecorded, currentEvents = [] }) => {
                 id: Date.now(),
                 plateNumber: formData.plateNumber,
                 firstName: formData.firstName,
-                sureName: formData.sureName,
+                surname: formData.surname,
                 accessType: formData.accessType,
                 isImportant: formData.isImportant,
                 notes: formData.notes,
@@ -61,7 +61,7 @@ const RealTimeAccessCard = ({ onAccessRecorded, currentEvents = [] }) => {
             setFormData({
                 plateNumber: '',
                 firstName: '',
-                sureName: '',
+                surname: '',
                 accessType: t('realtime.entry'),
                 isImportant: false,
                 notes: ''
@@ -177,8 +177,8 @@ const RealTimeAccessCard = ({ onAccessRecorded, currentEvents = [] }) => {
                                 </label>
                                 <input
                                     type="text"
-                                    name="sureName"
-                                    value={formData.sureName}
+                                    name="surname"
+                                    value={formData.surname}
                                     onChange={handleChange}
                                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
                                     placeholder={t('realtime.guest_last_name')}
@@ -262,7 +262,7 @@ const RealTimeAccessCard = ({ onAccessRecorded, currentEvents = [] }) => {
                                                 {event.plateNumber}
                                             </div>
                                             <div className="text-sm text-gray-600">
-                                                {event.ownerFirstName ? `${event.ownerFirstName} ${event.ownerSureName}` : event.ownerSureName}
+                                                {event.ownerFirstName ? `${event.ownerFirstName} ${event.ownerSurname}` : event.ownerSurname}
                                             </div>
                                         </div>
                                     </div>

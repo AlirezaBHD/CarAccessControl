@@ -12,7 +12,7 @@ const EditOwner = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         firstName: '',
-        sureName: '',
+        surname: '',
         nationalCode: '',
     });
     const [loading, setLoading] = useState(false);
@@ -30,7 +30,7 @@ const EditOwner = () => {
             const owner = response.data;
             setFormData({
                 firstName: owner.firstName || '',
-                sureName: owner.sureName || '',
+                surname: owner.surname || '',
                 nationalCode: owner.nationalCode || '',
             });
         } catch (err) {
@@ -64,10 +64,10 @@ const EditOwner = () => {
             newErrors.firstName = t('common.validation.min_length', { field: t('owners.fields.first_name'), count: 2 });
         }
 
-        if (!formData.sureName.trim()) {
-            newErrors.sureName = t('common.validation.required', { field: t('owners.fields.last_name') });
-        } else if (formData.sureName.length < 2) {
-            newErrors.sureName = t('common.validation.min_length', { field: t('owners.fields.last_name'), count: 2 });
+        if (!formData.surname.trim()) {
+            newErrors.surname = t('common.validation.required', { field: t('owners.fields.last_name') });
+        } else if (formData.surname.length < 2) {
+            newErrors.surname = t('common.validation.min_length', { field: t('owners.fields.last_name'), count: 2 });
         }
 
         if (formData.nationalCode && !/^\d{10}$/.test(formData.nationalCode)) {
@@ -158,25 +158,25 @@ const EditOwner = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="sureName" className="block text-sm font-medium text-secondary mb-2">
+                            <label htmlFor="surname" className="block text-sm font-medium text-secondary mb-2">
                                 {t('owners.fields.last_name')} *
                             </label>
                             <input
                                 type="text"
-                                id="sureName"
-                                name="sureName"
-                                value={formData.sureName}
+                                id="surname"
+                                name="surname"
+                                value={formData.surname}
                                 onChange={handleChange}
-                                className={inputClasses(errors.sureName)}
+                                className={inputClasses(errors.surname)}
                                 placeholder={t('owners.placeholders.last_name')}
                                 maxLength={50}
                             />
-                            {errors.sureName && (
+                            {errors.surname && (
                                 <p className="mt-2 text-sm text-red-600 flex items-center">
                                     <svg className="w-4 h-4 ms-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
-                                    {errors.sureName}
+                                    {errors.surname}
                                 </p>
                             )}
                         </div>

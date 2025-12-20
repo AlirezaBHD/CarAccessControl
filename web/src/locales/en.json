@@ -204,7 +204,6 @@
       "personnel_code": "Personnel Code",
       "first_name": "First Name",
       "last_name": "Last Name",
-      "sure_name": "Last Name",
       "full_name": "Full Name",
       "national_code": "National Code",
       "vehicles_count": "Vehicles Count",
@@ -214,7 +213,6 @@
     "placeholders": {
       "first_name": "Owner Name",
       "last_name": "Owner Last Name",
-      "sure_name": "Owner Last Name",
       "national_code": "1234567890"
     },
     "errors": {

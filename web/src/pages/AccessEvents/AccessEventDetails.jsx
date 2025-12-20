@@ -176,7 +176,7 @@ const AccessEventDetails = () => {
                             />
                             <DetailRow
                                 label={t('access_events.column_owner')}
-                                value={event.ownerFirstName ? `${event.ownerFirstName} ${event.ownerSureName}` : event.ownerSureName}
+                                value={event.ownerFirstName ? `${event.ownerFirstName} ${event.ownerSurname}` : event.ownerSurname}
                                 isLink={event.ownerId && true}
                                 linkTo={`/owners/${event.ownerId}`}
                             />
@@ -289,7 +289,7 @@ const AccessEventDetails = () => {
                                     <h3 className="font-semibold text-primary">{t('access_events.owner')}</h3>
                                 </div>
                                 <p className="text-sm text-gray-600 mb-2">
-                                    {t('access_events.owner_name')}: {event.ownerFirstName ? `${event.ownerFirstName} ${event.ownerSureName}` : event.ownerSureName}
+                                    {t('access_events.owner_name')}: {event.ownerFirstName ? `${event.ownerFirstName} ${event.ownerSurname}` : event.ownerSurname}
                                 </p>
                                 <p className="text-sm text-gray-600 mb-3">
                                     {t('access_events.owner_id')}: {event.ownerId === 0 ? '' : event.ownerId}

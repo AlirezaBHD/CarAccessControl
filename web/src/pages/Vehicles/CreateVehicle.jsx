@@ -192,7 +192,7 @@ const CreateVehicle = () => {
                                 <option value="">{t('vehicles.owner_select')}</option>
                                 {owners.map((owner) => (
                                     <option key={owner.id} value={owner.id}>
-                                        {owner.firstName} {owner.sureName} - {owner.nationalCode}
+                                        {owner.firstName} {owner.surname} - {owner.nationalCode}
                                     </option>
                                 ))}
                             </select>

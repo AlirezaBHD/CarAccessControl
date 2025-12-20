@@ -248,7 +248,7 @@ const VehicleDetails = () => {
                                     <dl className="space-y-3">
                                         <div className="flex justify-between">
                                             <dt className="text-sm text-gray-600">{t('owners.fields.full_name')}:</dt>
-                                            <dd className="text-sm text-primary">{owner.firstName} {owner.sureName}</dd>
+                                            <dd className="text-sm text-primary">{owner.firstName} {owner.surname}</dd>
                                         </div>
                                         <div className="flex justify-between">
                                             <dt className="text-sm text-gray-600">{t('owners.fields.national_code')}:</dt>

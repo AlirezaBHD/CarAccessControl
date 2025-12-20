@@ -150,7 +150,7 @@ const OwnerDetails = () => {
                             />
                             <DetailRow
                                 label={t('owners.fields.last_name')}
-                                value={owner.sureName}
+                                value={owner.surname}
                             />
                             <DetailRow
                                 label={t('owners.fields.national_code')}
@@ -159,7 +159,7 @@ const OwnerDetails = () => {
                             />
                             <DetailRow
                                 label={t('owners.fields.full_name')}
-                                value={`${owner.firstName || ''} ${owner.sureName || ''}`.trim()}
+                                value={`${owner.firstName || ''} ${owner.surname || ''}`.trim()}
                             />
                         </dl>
                     </CardBody>

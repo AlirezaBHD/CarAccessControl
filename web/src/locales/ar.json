@@ -206,7 +206,6 @@
       "id": "المعرف",
       "first_name": "الاسم الأول",
       "last_name": "الاسم الأخير",
-      "sure_name": "الاسم الأخير",
       "full_name": "الاسم الكامل",
       "national_code": "الرقم القومي",
       "vehicles_count": "عدد المركبات",
@@ -218,7 +217,6 @@
     },
     "placeholders": {
       "first_name": "اسم المالك الأول",
-      "sure_name": "اسم عائلة المالك",
       "last_name": "لقب المالك",
       "national_code": "1234567890"
     },

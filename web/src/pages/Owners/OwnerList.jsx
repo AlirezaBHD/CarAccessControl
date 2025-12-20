@@ -61,8 +61,8 @@ const OwnerList = () => {
         },
         {
             title: t('owners.fields.last_name'),
-            dataIndex: 'sureName',
-            key: 'sureName',
+            dataIndex: 'surname',
+            key: 'surname',
         },
         {
             title: t('owners.fields.national_code'),

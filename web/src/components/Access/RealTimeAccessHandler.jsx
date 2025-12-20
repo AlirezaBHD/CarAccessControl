@@ -65,7 +65,7 @@ const RealTimeAccessHandler = ({ onAccessProcessed }) => {
             const updateData = {
                 vehicleName: formData.vehicleName || '',
                 ownerFirstName: formData.ownerFirstName || '',
-                ownerSureName: formData.ownerSureName || '',
+                ownerSurname: formData.ownerSurname || '',
                 enter: formData.accessType === t('realtime.entry'),
                 notes: '',
                 isImportant: formData.isImportant || false
@@ -142,7 +142,7 @@ const PendingEventRow = ({ event, onProcess, processing, onDelete }) => {
     const [formData, setFormData] = useState({
         accessType: t('realtime.entry'),
         ownerFirstName: event.ownerFirstName || '',
-        ownerSureName: event.ownerSureName || '',
+        ownerSurname: event.ownerSurname || '',
         vehicleName: event.vehicleName || '',
         isImportant: false
     });
@@ -174,7 +174,7 @@ const PendingEventRow = ({ event, onProcess, processing, onDelete }) => {
             return;
         }
 
-        if (!formData.ownerFirstName.trim() || !formData.ownerSureName.trim()) {
+        if (!formData.ownerFirstName.trim() || !formData.ownerSurname.trim()) {
             alert(t('realtime.enter_full_name'));
             return;
         }
@@ -261,8 +261,8 @@ const PendingEventRow = ({ event, onProcess, processing, onDelete }) => {
                         </label>
                         <input
                             type="text"
-                            name="ownerSureName"
-                            value={formData.ownerSureName}
+                            name="ownerSurname"
+                            value={formData.ownerSurname}
                             onChange={handleChange}
                             className="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
                             placeholder={t('realtime.last_name')}

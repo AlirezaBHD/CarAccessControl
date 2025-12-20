@@ -84,7 +84,7 @@ const AccessEventList = () => {
                 plateNumber: processedEvent.plateNumber,
                 vehicleName: processedEvent.isImportant ? t('access_events.special_guest') : t('access_events.guest_vehicle'),
                 ownerFirstName: processedEvent.ownerFirstName,
-                ownerSureName: processedEvent.ownerSureName,
+                ownerSurname: processedEvent.ownerSurname,
                 gateName: getGateName(processedEvent.gateId),
                 isAllowed: true,
                 enter: processedEvent.accessType === "ورود",
@@ -220,12 +220,12 @@ const AccessEventList = () => {
         },
         {
             title: t('access_events.column_owner'),
-            dataIndex: 'ownerSureName',
+            dataIndex: 'ownerSurname',
             key: 'owner',
-            render: (sureName, record) => (
+            render: (surname, record) => (
                 <div>
                     <div className="font-medium text-secondary">
-                        {record.ownerFirstName ? `${record.ownerFirstName} ${sureName}` : sureName}
+                        {record.ownerFirstName ? `${record.ownerFirstName} ${surname}` : surname}
                     </div>
                     {record.processedBy && (
                         <div className="text-xs text-gray-500 mt-1">

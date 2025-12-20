@@ -52,9 +52,9 @@ const ExportModal = ({ isOpen, onClose, onExport, loading = false }) => {
             const ownersResponse = await vehicleOwnerAPI.getAll();
             const ownersData = ownersResponse.data.map(owner => ({
                 id: owner.id,
-                name: `${owner.firstName || ''} ${owner.sureName || ''}`.trim(),
+                name: `${owner.firstName || ''} ${owner.surname || ''}`.trim(),
                 firstName: owner.firstName,
-                sureName: owner.sureName,
+                surname: owner.surname,
                 nationalCode: owner.nationalCode
             }));
             setOwners(ownersData);
