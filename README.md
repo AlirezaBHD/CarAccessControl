@@ -88,7 +88,7 @@ docker load -i docker-images/plate-recognition.tar
 Once the image is loaded, start the application stack:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 After the containers are up and running, you can access the services at:
