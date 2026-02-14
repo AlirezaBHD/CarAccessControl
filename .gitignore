@@ -33,3 +33,4 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sw?
+**/appsettings.Development.json
