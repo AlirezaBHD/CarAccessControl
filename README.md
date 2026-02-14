@@ -64,8 +64,7 @@ This project is designed as a decoupled system where the backend handles logic a
 
 ---
 
-### 🐳 Installation & Setup
-
+## 🐳 Installation & Setup  
 Since the AI Model relies on a private Docker image, follow these steps to get started:
 
 ### 1. Prerequisites
