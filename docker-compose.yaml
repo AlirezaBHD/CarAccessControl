@@ -5,12 +5,12 @@ services:
       context: ./api
       dockerfile: src/CarAccessControl.API/Dockerfile
     environment:
-      FrontEnd__url: http://localhost
+      FrontEnd__url: ${WEB_PUBLIC_URL}
       ASPNETCORE_ENVIRONMENT: Production
-      ConnectionStrings__Default: Host=db;Port=5432;Database=car_access_control;Username=postgres;Password=12345
-      ModelUrl: "http://localhost:8000"
+      ConnectionStrings__Default: Host=db;Port=5432;Database=${DB_NAME};Username=${DB_USER};Password=${DB_PASSWORD}
+      ModelUrl: "${AI_SERVICE_URL}"
     ports:
-      - "8080:8080"
+      - "${API_PUBLIC_PORT}:8080"
     depends_on:
       - db
       - ai_model
@@ -23,9 +23,9 @@ services:
       context: ./web
       dockerfile: Dockerfile
       args:
-        VITE_BASE_URL: "http://localhost:8080"
+        VITE_BASE_URL: "${API_PUBLIC_URL}"
     ports:
-      - "80:80"
+      - "${WEB_PUBLIC_PORT}:80"
     depends_on:
       - api
     networks:
@@ -35,21 +35,19 @@ services:
     image: postgres:18
     container_name: car_db
     environment:
-      POSTGRES_DB: car_access_control
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "${DB_PORT}:5432"
     networks:
       - car_net
 
   ai_model:
     image: plate-recognition:0.0.1-warp-product
     container_name: car_ai_model
-    ports:
-      - "8000:8000"
     networks:
       - car_net
 
