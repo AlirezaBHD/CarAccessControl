@@ -1,5 +1,6 @@
 using AutoMapper;
 using CarAccessControl.Application.Features.Cameras.Mappings;
+using CarAccessControl.Application.Features.Gates.Mappings;
 
 namespace CarAccessControl.Application.Tests.Common.Fixtures;
 
@@ -12,6 +13,7 @@ public class MapperFixture : IDisposable
         var config = new MapperConfiguration(cfg =>
         {
             cfg.AddProfile<CameraProfile>();
+            cfg.AddProfile<GateProfile>();
         });
 
         Mapper = config.CreateMapper();
