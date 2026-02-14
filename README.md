@@ -47,7 +47,7 @@ This project is designed as a decoupled system where the backend handles logic a
 
 ### Frontend (React.js)
 *   **Framework:** React 18
-*   **Language:** JavaScript/TypeScript
+*   **Language:** JavaScript (JSX)
 *   **Localization:** i18next (English / Arabic)
 *   **State Management:** Context API
 *   **Styling:** Tailwind CSS
@@ -93,6 +93,11 @@ docker compose up -d
 
 After the containers are up and running, you can access the services at:
 http://localhost:80
+
+---
+
+## 📖 API Documentation 
+Swagger UI is available at: http://localhost:8000/swagger
 
 ---
 
